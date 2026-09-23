@@ -8,6 +8,8 @@ export interface LoginResponse {
   username: string;
 }
 
+// without this injection, the inject(Api) would fail, Angular wouldn't know this class is sth its allowed to construct and hand out.
+// providedIn: root means singleton, one shared instance for the whole app.
 @Injectable({ providedIn: 'root' })
 export class Api {
   private http = inject(HttpClient);
