@@ -61,3 +61,17 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## Reading order
 - main.ts → app.config.ts → app.ts → app.routes.ts → whichever component the route matched
+
+- ng serve - spinning an angular server
+
+- ng g guard guards/auth - creating file
+
+- ng g c pages/dashboard
+
+
+
+## USSD
+
+![USSD architecture diagram](public/assets/ussd.png)
+
+USSD architecture diagram
