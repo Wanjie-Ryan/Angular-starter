@@ -1,0 +1,15 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <label>
+    Username
+    <input type="text" formControlName="username" />
+  </label>
+
+  <label>
+    Password
+    <input type="password" formControlName="password" />
+  </label>
+
+  <button type="submit" [disabled]="loginForm.invalid || isSubmitting()">
+    {{ isSubmitting() ? 'Logging in...' : 'Login' }}
+  </button>
+</form>
