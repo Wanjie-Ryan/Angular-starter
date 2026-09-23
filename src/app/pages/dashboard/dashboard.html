@@ -1,1 +1,25 @@
-<p>dashboard works!</p>
+<h1>dashboard works!</h1>
+
+<button (click) = "logout()">Log out</button>
+
+<h2>Products Listed</h2>
+
+@if (isLoading()){
+    <p>Loading...</p>
+}@else{
+    <ul>
+        @for (product of products); track product.id {
+            <li>{{product.title}} - ${{product.price}}</li>
+        }
+    </ul>
+}
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <label>Title <input type="text" formControlName="title" /></label>
+  <label>Price <input type="number" formControlName="price" /></label>
+  <button type="submit" [disabled]="isSubmitting()">
+    {{ isSubmitting() ? 'Adding...' : 'Add Product' }}
+  </button>
+</form>
+
+
