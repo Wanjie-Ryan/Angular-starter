@@ -11,6 +11,8 @@ import { finalize } from 'rxjs';
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
+
+// OnInit is like onMounted, fetch the products once this page is hit immedtiately
 export class Dashboard implements OnInit {
   private api = inject(Api);
   private fb = inject(FormBuilder);
