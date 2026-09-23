@@ -58,8 +58,20 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
-
 ## Reading order
+
+1. Create project
+
+- npx @angular/cli new project-name --style=css --routing=true --ssr=false
+
+2. npm i - if it did not install
+
+3. ng serve -o
+
+4. open src/app.html, delete everything, and replace with just <router-outlet/>
+
+5. open src/app/app.config.ts, add provideHttpClient() to the providers array, import from '@angular/common/http'
+
 - main.ts → app.config.ts → app.ts → app.routes.ts → whichever component the route matched
 
 - ng serve - spinning an angular server
@@ -68,7 +80,7 @@ For more information on using the Angular CLI, including detailed command refere
 
 - ng g c pages/dashboard
 
-
+- ng g s <path>
 
 ## USSD
 
